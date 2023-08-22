@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- theme meta -->
+    <meta name="theme-name" content="focus" />
+    <title>ADI | Aluguel</title>
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+    <!-- Standard iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+    <!-- Standard iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+    <!-- Styles -->
+    <link href="css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
+    <link href="css/lib/chartist/chartist.min.css" rel="stylesheet">
+    <link href="css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="css/lib/themify-icons.css" rel="stylesheet">
+    <link href="css/lib/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/lib/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="css/lib/weather-icons.css" rel="stylesheet" />
+    <link href="css/lib/menubar/sidebar.css" rel="stylesheet">
+    <link href="css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="css/lib/helper.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/lib/autocomplete.css">
+</head>
+
+<body>
+
+    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+        <div class="nano">
+            <div class="nano-content">
+                <ul>
+                    <div class="logo"><a href="index.html">
+                            <!-- <img src="images/logo.png" alt="" /> --><span>ADI</span></a></div>
+                    <li class="label">Menu</li>
+                    <li><a href="index.html"><i class="ti-home"></i> Início</a></li>
+
+                    <!-- Cadastros -->
+                    <li><a class="sidebar-sub-toggle"><i class="ti-marker"></i> Cadastros <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a id="abaCadastroCliente">Cliente</a></li>
+                            <li><a id="abaCadastroEquipamento">Equipamento</a></li>
+                            <li><a id="abaCadastroFornecedor">Fornecedor</a></li>
+                            <li><a id="abaCadastroMensagem">Mensagem</a></li>
+                            <li><a id="abaCadastroPrefeitura">Prefeitura</a></li>
+                            <li><a id="abaCadastroSecretaria">Secrertaria</a></li>
+                            <li><a id="abaCadastroTipo">Tipo</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Movimentações -->
+                    <li><a class="sidebar-sub-toggle"><i class="ti-exchange-vertical"></i> Movimentações <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a id="abaMovimentacaoAluguel">Aluguel</a></li>
+                            <li><a id="abaMovimentacaoDevolucao">Devolução</a></li>
+                            <li><a id="abaMovimentacaoSubstituicao">Substituição</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Consultas -->
+                    <li><a class="sidebar-sub-toggle"><i class="ti-search"></i> Consultas <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a id="abaConsultaAcaoMovimento">Ações de Movimento</a></li>
+                            <li><a id="abaConsultaAluguel">Aluguel</a></li>
+                            <li><a id="abaConsultaCliente">Cliente</a></li>
+                            <li><a id="abaConsultaDevolucao">Devolução</a></li>
+                            <li><a id="abaConsultaEquipamento">Equipamento</a></li>
+                            <li><a id="abaConsultaFornecedor">Fornecedor</a></li>
+                            <li><a id="abaConsultaPrefeitura">Prefeitura</a></li>
+                            <li><a id="abaConsultaSecretaria">Secretaria</a></li>
+                            <li><a id="abaConsultaSubstituir">Substituir</a></li>
+                            <li><a id="abaConsultaTipo">Tipo</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Relatórios -->
+                    <li><a class="sidebar-sub-toggle"><i class="ti-layout-tab"></i> Relatórios <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a id="abaRelatorioCliente">Cliente</a></li>
+                            <li><a id="abaRelatorioEquipamento">Equipamento</a></li>
+                            <li><a id="abaRelatorioEOC">Equipamento por Órgão Centralizador</a></li>
+                            <li><a id="abaRelatorioEstoque">Estoque</a></li>
+                            <li><a id="abaRelatorioECliente">Estoque por Cliente</a></li>
+                            <li><a id="abaRelatorioEME">Extrato de Movimentos por Equipamento</a></li>
+                            <li><a id="abaRelatorioFornecedor">Fornecedor</a></li>
+                            <li><a id="abaRelatorioMovimentacoes">Movimentações</a></li>
+                            <li><a id="abaRelatorioPrefeitura">Prefeitura</a></li>
+                            <li><a id="abaRelatorioSecretaria">Secretaria</a></li>
+                            <li><a id="abaRelatorioTipo">Tipo</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a><i class="ti-close"></i> Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /# sidebar -->
+
+    <div class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="float-left">
+                        <div class="hamburger sidebar-toggle">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="float-right">
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i class="ti-bell"></i>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">Recent Notifications</span>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. John</div>
+                                                        <div class="notification-text">5 members joined today </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mariam</div>
+                                                        <div class="notification-text">likes a photo of you</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Tasnim</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. John</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i class="ti-email"></i>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">2 New Messages</span>
+                                        <a href="email.html">
+                                            <i class="ti-pencil-alt pull-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="images/avatar/1.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Michael Qin</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. John</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Michael Qin</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img"
+                                                        src="images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34
+                                                            PM</small>
+                                                        <div class="notification-heading">Mr. John</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you
+                                                            ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <span class="user-avatar">John
+                                    <i class="ti-angle-down f-s-10"></i>
+                                </span>
+                                <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">Upgrade Now</span>
+                                        <p class="trial-day">30 Days Trail</p>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-user"></i>
+                                                    <span>Profile</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-email"></i>
+                                                    <span>Inbox</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-settings"></i>
+                                                    <span>Setting</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-lock"></i>
+                                                    <span>Lock Screen</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-power-off"></i>
+                                                    <span>Logout</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 p-r-0 title-margin-right">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <h1>Olá, <span>Bom dia</span></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                    <div class="col-lg-4 p-l-0 title-margin-left">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                                    <li class="breadcrumb-item active">Home</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                </div>
+                <!-- /# row -->
+                <section id="main-content"></section>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Departamentos</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Aluguel</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Departamentos</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Almoxarife</button>
+            <button type="button" class="btn btn-primary">Aluguel</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- jquery vendor -->
+    <script src="./js/jquery.js"></script>
+    <!-- <script src="./js/lib/jquery.min.js"></script> -->
+    <script src="./js/lib/jquery.nanoscroller.min.js"></script>
+    <!-- nano scroller -->
+    <script src="./js/lib/menubar/sidebar.js"></script>
+    <script src="./js/lib/preloader/pace.min.js"></script>
+    <!-- sidebar -->
+    <script src="./js/lib/bootstrap.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <!-- bootstrap -->
+    <script src="./js/lib/calendar-2/moment.latest.min.js"></script>
+    <script src="./js/lib/calendar-2/pignose.calendar.min.js"></script>
+    <script src="./js/lib/calendar-2/pignose.init.js"></script>
+    <script src="./js/lib/weather/jquery.simpleWeather.min.js"></script>
+    <script src="./js/lib/weather/weather-init.js"></script>
+    <script src="./js/lib/circle-progress/circle-progress.min.js"></script>
+    <script src="./js/lib/circle-progress/circle-progress-init.js"></script>
+    <script src="./js/lib/chartist/chartist.min.js"></script>
+    <script src="./js/lib/sparklinechart/jquery.sparkline.min.js"></script>
+    <script src="./js/lib/sparklinechart/sparkline.init.js"></script>
+    <script src="./js/lib/owl-carousel/owl.carousel.min.js"></script>
+    <script src="./js/lib/owl-carousel/owl.carousel-init.js"></script>
+    <!-- scripit init-->
+    <script src="./js/dashboard2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js"></script>
+
+    <!-- Cadastros -->
+    <script src="./js/modais/cadastros/cliente.js"></script>
+    <script src="./js/modais/cadastros/equipamento.js"></script>
+    <script src="./js/modais/cadastros/fornecedor.js"></script>
+    <script src="./js/modais/cadastros/mensagem.js"></script>
+    <script src="./js/modais/cadastros/prefeitura.js"></script>
+    <script src="./js/modais/cadastros/secretaria.js"></script>
+    <script src="./js/modais/cadastros/tipo.js"></script>
+
+    <!-- Movimentações -->
+    <script src="./js/modais/movimentacoes/aluguel.js"></script>
+    <script src="./js/modais/movimentacoes/devolucao.js"></script>
+    <script src="./js/modais/movimentacoes/substituicao.js"></script>
+
+    <!-- Movimentações | Tools -->
+    <script src="./js/modais/movimentacoes/aluguel_tools/acclient.js"></script>
+
+    <!-- Consultas -->
+    <script src="./js/modais/consultas/acaomovimento.js"></script>
+    <script src="./js/modais/consultas/aluguel.js"></script>
+    <script src="./js/modais/consultas/cliente.js"></script>
+    <script src="./js/modais/consultas/devolucao.js"></script>
+    <script src="./js/modais/consultas/equipamento.js"></script>
+    <script src="./js/modais/consultas/fornecedor.js"></script>
+    <script src="./js/modais/consultas/prefeitura.js"></script>
+    <script src="./js/modais/consultas/secretaria.js"></script>
+    <script src="./js/modais/consultas/substituicoes.js"></script>
+    <script src="./js/modais/consultas/tipo.js"></script>
+
+    <!-- Relatórios -->
+    <script src="./js/modais/relatorios/cliente.js"></script>
+    <script src="./js/modais/relatorios/equipamento.js"></script>
+    <script src="./js/modais/relatorios/eoc.js"></script>
+    <script src="./js/modais/relatorios/estoque.js"></script>
+    <script src="./js/modais/relatorios/ecliente.js"></script>
+    <script src="./js/modais/relatorios/eme.js"></script>
+    <script src="./js/modais/relatorios/fornecedor.js"></script>
+    <script src="./js/modais/relatorios/movimentacoes.js"></script>
+    <script src="./js/modais/relatorios/prefeitura.js"></script>
+    <script src="./js/modais/relatorios/secretarias.js"></script>
+    <script src="./js/modais/relatorios/tipo.js"></script>
+
+</body>
+
+</html>

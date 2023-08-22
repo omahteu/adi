@@ -1,0 +1,35 @@
+#resultado_pesquisa {
+    display: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 1px rgba(255, 255, 255, 0);
+    position: absolute;
+    height: 150px;
+    /* overflow: scroll; */
+    width: 50%;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+#resultado_pesquisa_equipamento {
+    display: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 1px rgba(255, 255, 255, 0);
+    position: absolute;
+    height: 150px;
+    /* overflow: scroll; */
+    width: 50%;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+#resultado_pesquisa_tipo {
+    display: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 1px rgba(255, 255, 255, 0);
+    position: absolute;
+    height: 150px;
+    /* overflow: scroll; */
+    width: 50%;
+    z-index: 9999;
+    cursor: pointer;
+}
