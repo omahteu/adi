@@ -1,4 +1,2 @@
 # alucom
 # adi
-# adi
-# adi
