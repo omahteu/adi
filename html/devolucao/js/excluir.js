@@ -1,15 +1,11 @@
-var box_devolucao = []
-
-$(document).on("click", "#selecionarEquipamento", function() {
-    let equip = $("#equipamento").val()
-    if (equip != "") {
-        let i3 = $("#equipamento").val()
-        box_devolucao.push(i3)
-        alert("Equipamento Adicionado com Sucesso!")
-        updateTable()
-        document.getElementById("foooo").reset()
-        contagem()
+$(document).on("click", ".excluir", function() {
+    let valor = $(this).attr("data-toggle")
+    const indexToRemove = box_devolucao.indexOf(valor);
+    if (indexToRemove !== -1) {
+      box_devolucao.splice(indexToRemove, 1);
     }
+    alert("Equipamento Excluido com Sucesso!")
+    updateTable()
 })
 
 function updateTable() {
@@ -31,13 +27,5 @@ function updateTable() {
             </tr>
         `
         });
-    }
-}
-
-async function contagem() {
-    const rq = await fetch("countDoc.php")
-    const rs = await rq.json()
-    if(rs["erro"] == false) {
-        $("#documento").val(rs["dados"][0].numero)
     }
 }
